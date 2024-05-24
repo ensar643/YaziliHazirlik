@@ -1,0 +1,23 @@
+﻿@model List<OgrenciSinifModel>
+<table class="table">
+    <tr>
+        <th>Öğrenci ID</th>
+        <th>Öğrenci Adi</th>
+        <th>Öğrenci Soyadı</th>
+        <th> # </th>
+    </tr>
+    @foreach (var ogrenciSinif in Model)
+    {
+        <tr>
+            <td>@ogrenciSinif.OgrenciId</td>
+            <td>@ogrenciSinif.OgrenciAdi</td>
+            <td>@ogrenciSinif.OgrenciSoyadi</td>
+            <td>@ogrenciSinif.SinifAdi</td>
+            <td>@ogrenciSinif.SinifKodu</td>
+            <td>
+                <a class="btn btn-primary" href="/Ogrenci/Guncelle/@ogrenciSinif.OgrenciId">Güncelle</a>
+                <a class="btn btn-primary" href="/Ogrenci/Sil/@ogrenciSinif.OgrenciId">Sil</a>
+            </td>
+        </tr>
+    }
+</table>
